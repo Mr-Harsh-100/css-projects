@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Blog Layout</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 auto;
+            max-width: 1200px;
+            padding: 20px;
+        }
+
+        .main-content {
+            float: left;
+            width: 70%;
+            box-sizing: border-box;
+            padding: 20px;
+        }
+
+        .main-content img {
+            float: left;
+            margin: 0 20px 20px 0;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .sidebar {
+            float: left;
+            width: 30%;
+            box-sizing: border-box;
+            padding: 20px;
+            height: auto;
+        }
+
+        .scrollable {
+            height: 400px;
+            overflow: auto;
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+
+        .scrollable ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .scrollable ul li {
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        @media (max-width: 768px) {
+            .main-content, .sidebar {
+                float: none;
+                width: 100%;
+                padding: 10px;
+            }
+
+            .main-content img {
+                float: none;
+                margin: 0 0 20px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>My Blog</h1>
+</header>
+
+<div class="container clearfix">
+    <div class="main-content">
+        <h2>Blog Post Title</h2>
+        <img src="https://via.placeholder.com/150" alt="Post Thumbnail">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac nibh eu metus pretium vehicula. Suspendisse potenti. Integer fermentum.</p>
+        <p>Curabitur gravida lacus sit amet nisi posuere, a venenatis magna interdum. Donec sollicitudin convallis lorem nec elementum.</p>
+    </div>
+
+    <aside class="sidebar">
+        <h2>Recent Posts</h2>
+        <div class="scrollable">
+            <ul>
+                <li>Post 1</li>
+                <li>Post 2</li>
+                <li>Post 3</li>
+                <li>Post 4</li>
+                <li>Post 5</li>
+                <li>Post 6</li>
+                <li>Post 7</li>
+                <li>Post 8</li>
+                <li>Post 9</li>
+                <li>Post 10</li>
+            </ul>
+        </div>
+    </aside>
+</div>
+
+</body>
+</html>
